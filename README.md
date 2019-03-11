@@ -61,7 +61,7 @@ fsm.Update(1.0f);
 fsm.Update(1.0f);
 ```
 
-Because invoking the FSM compiler multiple times can lead to expensive spikes in compile time, aim to keep instantiation of the `CxFSM::CompiledFSM<T>` template constrained to as few compilation units as possible. Opt to interact with the FSM via their driver interface wherever possible:
+Because invoking the FSM compiler multiple times can lead to expensive spikes in compile time, aim to keep instantiation of the `CxFSM::CompiledFSM<T>` template constrained to as few compilation units as possible. Opt to interact with FSMs via their driver interface wherever possible:
 
 ```c++
 // Defined in a separate .cpp file
