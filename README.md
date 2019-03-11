@@ -28,7 +28,7 @@ Drivers implement the core logic that dictates control flow between states. CxFS
 - `TimedDriver` - Implements a time based FSM that transitions when a state reaches the end of its duration.
 - `MessageDriver` - Implements a more traditional message based FSM.
 
-CxFSM is extensible allowing custom drivers to be implmeneted as needed by the developer.
+CxFSM is extensible allowing custom drivers to be implemented as needed by the developer.
 
 #### State Logic
 State logic is defined using the builder interface passed into the Blueprint function:
