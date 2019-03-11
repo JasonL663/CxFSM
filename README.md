@@ -1,6 +1,6 @@
-# CxFSM - Constexpr Finite State Machines
+# CxFSM - Compile-Time Expressed Finite State Machines
 
-This C++17 library allows finite state machines to be constructed and instantiated at compile time.
+This C++17 library allows finite state machines to be constructed at compile-time.
 
 # Motivation
 
