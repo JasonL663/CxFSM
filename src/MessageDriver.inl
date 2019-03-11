@@ -33,6 +33,7 @@ namespace CxFSM
 		virtual void Update(Message msg) override
 		{
 			context.fsm = this;
+			context.data = &data;
 			context.msg = &msg;
 
 			OnMessage(SSEQ);

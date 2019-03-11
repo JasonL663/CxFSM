@@ -37,18 +37,19 @@ namespace CxFSM
 		float time = 0.0f;
 		size_t state = 0;
 		UserData data = {};
-		Context context = { this, nullptr };
+		Context context = { this, &data, nullptr };
 	};
 
-	template <class MessageType, class UserData>
-	struct MessageDriver<MessageType, UserData>::Context
+	template <class Message, class UserData>
+	struct MessageDriver<Message, UserData>::Context
 	{
-		MessageDriver<MessageType>* fsm;
-		MessageType* msg;
+		MessageDriver<Message, UserData>* fsm;
+		UserData* data;
+		Message* msg;
 	};
 
-	template <class MessageType, class UserData>
-	struct MessageDriver<MessageType, UserData>::State
+	template <class Message, class UserData>
+	struct MessageDriver<Message, UserData>::State
 	{
 		constexpr State() = default;
 
@@ -58,8 +59,8 @@ namespace CxFSM
 		Callback<void> OnExit = nullptr;
 	};
 
-	template <class MessageType, class UserData>
-	struct MessageDriver<MessageType, UserData>::Transition
+	template <class Message, class UserData>
+	struct MessageDriver<Message, UserData>::Transition
 	{
 		constexpr Transition() = default;
 
