@@ -48,7 +48,7 @@ builder.transition[ST_Second].OnTest = [](Context* ctx) { return /* bool express
 builder.transition[ST_Second].OnTraverse = [](Context* ctx) { /* callback body */ };
 ```
 
-The data exposed by the `state` and `transition` members will differ depending on the `Driver` type being used.
+The fields exposed by the `state` and `transition` members will differ depending on the `Driver` type being used.
 
 #### Execution
 
